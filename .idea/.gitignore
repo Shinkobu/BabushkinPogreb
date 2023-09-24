@@ -3,3 +3,4 @@
 /workspace.xml
 **/logs
 **/application.properties
+**/target
