@@ -8,6 +8,9 @@ import org.telegram.telegrambots.bots.TelegramLongPollingBot;
 import org.telegram.telegrambots.meta.api.methods.send.SendMessage;
 import org.telegram.telegrambots.meta.api.objects.Update;
 import org.telegram.telegrambots.meta.exceptions.TelegramApiException;
+import ru.relex.service.UpdateProducer;
+
+import javax.annotation.PostConstruct;
 
 
 /* Using LongPolling (webHooks) technology (
@@ -15,18 +18,37 @@ import org.telegram.telegrambots.meta.exceptions.TelegramApiException;
 2) ssl certificate to work with telegram
  */
 
-@Component // spring will make bin and place it into context
-@Log4j // Lombok
+@Component /* spring will make bean and place it into context / annotation on a class makes a singleton bean of
+ that said class */
+@Log4j // Lombok adds static final field log4j. No need to make instance of logger manually.
 public class TelegramBot extends TelegramLongPollingBot {
 
+    /*    private static final Logger log = Logger.getLogger(TelegramBot.class); // the above annotation @Log4j (of Lombok
+    library) replaces this declaration
+ */
     @Value("${bot.name}") //spring ann - allows to get property from external file
     private String botName;
     @Value("${bot.token}")
     private String botToken;
-/*    private static final Logger log = Logger.getLogger(TelegramBot.class); // the above annotation @Log4j (of Lombok
-    library) replaces this declaration
 
- */
+
+    private UpdateController updateController;
+
+    /**
+     * https://youtu.be/150R89VmJgc?si=19FLFJ6H9T0TkuFc&t=184
+     * В тгБот внедряется ссылка на updateController и после внедрения зависимости выполняется init метод. В нём мы
+     * передаём ссылку на сам тгБот в updateController. Т.О. тгБот сможет передать входящее сообщение в контроллер,
+     * а контроллер сможет передать ответы обратно в тгБот
+     * @param updateController
+     */
+    public TelegramBot(UpdateController updateController) {
+        this.updateController = updateController;
+    }
+
+    @PostConstruct
+    public void init() {
+        updateController.registerBot(this);
+    }
 
     @Override
     public String getBotUsername() {
@@ -38,16 +60,25 @@ public class TelegramBot extends TelegramLongPollingBot {
         return botToken;
     }
 
+    /**
+     * Handles with incoming message or any other update
+     * @param update
+     */
     @Override
     public void onUpdateReceived(Update update) {
-        var originalMessage = update.getMessage();
-//        System.out.println(originalMessage.getText()); // returns message sent to bot to console
-        log.debug(originalMessage.getText());
 
-        var response = new SendMessage();
-        response.setChatId(originalMessage.getChatId().toString());
-        response.setText("Hello from bot!");
-        sendAnswerMessage(response);
+        //version 1
+//        var originalMessage = update.getMessage();
+//        System.out.println(originalMessage.getText()); // returns message sent to bot to console
+        //version 2 - generate answer Hello from bot
+//        var originalMessage = update.getMessage();
+//        log.debug(originalMessage.getText());
+//        var response = new SendMessage();
+//        response.setChatId(originalMessage.getChatId().toString());
+//        response.setText("Hello from bot!");
+//        sendAnswerMessage(response);
+        //version 3 - integration with UpdateController
+        updateController.processUpdate(update);
 
     }
 

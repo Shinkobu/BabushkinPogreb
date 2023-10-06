@@ -12,9 +12,9 @@
     <artifactId>dispatcher</artifactId>
 
     <properties>
-        <maven.compiler.source>16</maven.compiler.source>
-        <maven.compiler.target>16</maven.compiler.target>
-        <telegrambot.starter.version>5.0.1</telegrambot.starter.version>
+        <maven.compiler.source>11</maven.compiler.source>
+        <maven.compiler.target>11</maven.compiler.target>
+        <telegrambot.starter.version>6.0.1</telegrambot.starter.version>
     </properties>
 
 <!--    to start service as spring boot application-->
@@ -29,15 +29,12 @@
             <artifactId>telegrambots-spring-boot-starter</artifactId>
             <version>${telegrambot.starter.version}</version>
         </dependency>
-
-<!--        <dependency>-->
-<!--            <groupId>org.springframework</groupId>-->
-<!--            <artifactId>spring-framework-bom</artifactId>-->
-<!--            <version>6.0.6</version>-->
-<!--            <type>pom</type>-->
-<!--            <scope>import</scope>-->
-<!--        </dependency>-->
-
+<!-- adds dependency (like a link) to another module-->
+        <dependency>
+            <groupId>ru.relex</groupId>
+            <artifactId>common-rabbitmq</artifactId>
+            <version>1.0-SNAPSHOT</version>
+        </dependency>
     </dependencies>
 
 </project>
