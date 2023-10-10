@@ -40,3 +40,17 @@ $ docker exec -it rabbitmq /bin/bash
 $ rabbitmqctl add_user userok p@ssw0rd
 $ rabbitmqctl set_user_tags userok administrator
 $ rabbitmqctl set_permissions -p / userok ".*" ".*" ".*"
+
+Урок 4 https://www.youtube.com/watch?v=gwF41nvueG0&list=PLV_4DSIw2vvI3_a6L_z5AlNaIdFNqQlW2&index=6
+Создаем микросервис Node. Считываем сообщения из RabbitMQ. 
+
+Итог: создан микросервис Node.
+NodeApplication и Dispatcher должный быть запущены. RabbitMQ должен работать из докера
+
+1) Dispatcher принимает входящее сообщение телеграм
+2) Dispatcher передаёт его в RabbitMQ (развёрнут в docker)
+3) RabbitMQ передаёт его в Node
+4) Node получила сообщение, достала оттуда id чата и сформировала ответ Hello from Node
+5) Node передала ответ в RabbitMQ
+6) RabbitMQ передал ответ в Dispatcher
+7) Dispatcher передал его в телеграм
