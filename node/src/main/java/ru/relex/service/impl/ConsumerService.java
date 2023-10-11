@@ -4,8 +4,8 @@ import lombok.extern.log4j.Log4j;
 import org.springframework.amqp.rabbit.annotation.RabbitListener;
 import org.springframework.stereotype.Service;
 import org.telegram.telegrambots.meta.api.methods.send.SendMessage;
-import org.telegram.telegrambots.meta.api.objects.Message;
 import org.telegram.telegrambots.meta.api.objects.Update;
+import ru.relex.service.MainService;
 import ru.relex.service.ProducerService;
 
 import static ru.relex.model.RabbitQueue.*;
@@ -13,10 +13,10 @@ import static ru.relex.model.RabbitQueue.*;
 @Service
 @Log4j
 public class ConsumerService implements ru.relex.service.ConsumerService {
-    private final ProducerService producerService;
+    private final MainService mainService;
 
-    public ConsumerService(ProducerService producerService) {
-        this.producerService = producerService;
+    public ConsumerService(MainService mainService) {
+        this.mainService = mainService;
     }
 
     // RabbitMQ pushes the message to the current consumer.
@@ -25,14 +25,7 @@ public class ConsumerService implements ru.relex.service.ConsumerService {
     @RabbitListener(queues = TEXT_MESSAGE_UPDATE) // the queue which method will listen to
     public void consumeTextMessageUpdates(Update update) {
         log.debug("NODE: Text message is received"); //stub
-
-
-        // test sending from node to dispatcher
-        var message = update.getMessage();
-        var sendMessage = new SendMessage();
-        sendMessage.setChatId(message.getChatId().toString());
-        sendMessage.setText("Hello from NODE");
-        producerService.produceAnswer(sendMessage);
+        mainService.processTextMessage(update);
     }
 
     @Override

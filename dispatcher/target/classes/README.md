@@ -40,3 +40,42 @@ $ docker exec -it rabbitmq /bin/bash
 $ rabbitmqctl add_user userok p@ssw0rd
 $ rabbitmqctl set_user_tags userok administrator
 $ rabbitmqctl set_permissions -p / userok ".*" ".*" ".*"
+
+Урок 4 https://www.youtube.com/watch?v=gwF41nvueG0&list=PLV_4DSIw2vvI3_a6L_z5AlNaIdFNqQlW2&index=6
+Создаем микросервис Node. Считываем сообщения из RabbitMQ. 
+
+Итог: создан микросервис Node.
+NodeApplication и Dispatcher должный быть запущены. RabbitMQ должен работать из докера
+
+1) Dispatcher принимает входящее сообщение телеграм
+2) Dispatcher передаёт его в RabbitMQ (развёрнут в docker)
+3) RabbitMQ передаёт его в Node
+4) Node получила сообщение, достала оттуда id чата и сформировала ответ Hello from Node
+5) Node передала ответ в RabbitMQ
+6) RabbitMQ передал ответ в Dispatcher
+7) Dispatcher передал его в телеграм
+
+Урок 5 https://www.youtube.com/watch?v=rIogCnxz9kk&list=PLV_4DSIw2vvI3_a6L_z5AlNaIdFNqQlW2&index=6
+Разворачиваем PostgreSQL в Docker. PgAdmin VS IntelliJ IDEA. Урок 5.
+
+
+Команда для разворачивания PostgreSQL в Docker:
+docker run -d --hostname pogreb --name pogreb -p 5432:5432 -e POSTGRES_USER=userok -e POSTGRES_PASSWORD=p@ssw0rd -e POSTGRES_DB=pogreb -v /data:/var/lib/postgresql/data --restart=unless-stopped postgres:14.5
+
+Так путь к volume может выглядеть в Windows:
+/data:c:\postgres_data
+
+Флаги:
+--detach , -d   запустит контейнер в фоновом режиме и вернет идентификатор контейнера;
+--hostname   адрес контейнера для подключения к нему внутри docker из других контейнеров;
+--name   имя контейнера;
+-p    порты: первый порт — тот, который мы увидим снаружи docker, а второй — тот, который внутри контейнера;
+-e  задает переменную окружения в контейнере;
+POSTGRES_DB=pogreb - задать дефолтную базу данных
+-v   примонтировать volume (том); /data - путь, где хранятся данные внутри контейнера,
+/var/lib/postgresql/data - путь в нашей файловой системе
+--restart=unless-stopped   контейнер будет подниматься заново при каждом перезапуске системы (точнее, при запуске docker);
+
+
+Урок 6. Подключаем микросервис к PostgreSQL с помощью Spring Data JPA.
+https://www.youtube.com/watch?v=AeekNYkAYug&list=PLV_4DSIw2vvI3_a6L_z5AlNaIdFNqQlW2&index=7
