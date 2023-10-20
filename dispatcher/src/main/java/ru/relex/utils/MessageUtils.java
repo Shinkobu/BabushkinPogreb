@@ -14,6 +14,7 @@ public class MessageUtils {
         var sendMessage = new SendMessage();
         sendMessage.setChatId(message.getChatId().toString());
         sendMessage.setText(text);
+
         return sendMessage;
     }
 }

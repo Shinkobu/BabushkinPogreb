@@ -31,7 +31,7 @@ public class UpdateProducerImpl implements UpdateProducer {
 
     @Override
     public void produce(String rabbitQueue, Update update) {
-        log.debug(update.getMessage().getText()); // stub
+        log.debug("Converting and sending message to RabbitMQ: "+ update.getMessage().getText());
         rabbitTemplate.convertAndSend(rabbitQueue, update);
     }
 }

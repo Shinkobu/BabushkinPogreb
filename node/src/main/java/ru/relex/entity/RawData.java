@@ -1,10 +1,7 @@
 package ru.relex.entity;
 
 import com.vladmihalcea.hibernate.type.json.JsonBinaryType;
-import lombok.AllArgsConstructor;
-import lombok.Builder;
-import lombok.Data;
-import lombok.NoArgsConstructor;
+import lombok.*;
 import org.hibernate.annotations.Type;
 import org.hibernate.annotations.TypeDef;
 import org.telegram.telegrambots.meta.api.objects.Update;
@@ -18,7 +15,10 @@ import javax.persistence.*;
  *
  */
 
-@Data // lombok. all getters, setters
+//@Data // lombok. all getters, setters, equals and hashcode
+@Getter // lombok generates getters
+@Setter // lombok generates setters
+@EqualsAndHashCode (exclude = "id") // lombok generates equals and hashcode using all fields except excluded
 @Builder // lombok. builder inner class
 @NoArgsConstructor // lombok. constructor with no arguments
 @AllArgsConstructor  // lombok. constructor with all arguments

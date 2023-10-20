@@ -98,3 +98,22 @@
 2023-10-10 06:53:32 DEBUG UpdateProducerImpl:34 - 55
 2023-10-11 20:11:02 DEBUG UpdateProducerImpl:34 - Hello
 2023-10-11 20:14:26 DEBUG UpdateProducerImpl:34 - hi again!
+2023-10-19 12:26:57 DEBUG UpdateProducerImpl:34 - ввв
+2023-10-19 12:32:05 DEBUG UpdateProducerImpl:34 - hi
+2023-10-19 12:36:32 DEBUG UpdateProducerImpl:34 - hi man
+2023-10-19 12:39:55 DEBUG UpdateProducerImpl:34 - hophop
+2023-10-19 12:41:23 DEBUG UpdateProducerImpl:34 - 555
+2023-10-19 17:12:44 DEBUG UpdateProducerImpl:34 - hello
+2023-10-19 17:15:55 DEBUG UpdateProducerImpl:34 - d
+2023-10-19 17:15:56 DEBUG UpdateProducerImpl:34 - d
+2023-10-19 17:15:56 DEBUG UpdateProducerImpl:34 - d
+2023-10-19 17:45:21 DEBUG UpdateProducerImpl:34 - 333
+2023-10-19 17:45:32 DEBUG UpdateProducerImpl:34 - ddd
+2023-10-19 17:47:36 DEBUG UpdateProducerImpl:34 - ddd
+2023-10-19 17:47:55 DEBUG UpdateProducerImpl:34 - ddd
+2023-10-19 18:12:30 DEBUG UpdateProducerImpl:34 - rrr
+2023-10-19 18:12:35 DEBUG UpdateProducerImpl:34 - sss
+2023-10-19 18:19:49 DEBUG TelegramBot:81 - Waiting for new incoming message
+2023-10-19 18:19:50 DEBUG UpdateController:50 - Defining message type
+2023-10-19 18:19:50 DEBUG UpdateController:53 - Type defined - tex message
+2023-10-19 18:19:50 DEBUG UpdateProducerImpl:34 - Converting and sending message to RabbitMQ: 123

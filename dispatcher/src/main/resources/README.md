@@ -79,3 +79,54 @@ POSTGRES_DB=pogreb - задать дефолтную базу данных
 
 Урок 6. Подключаем микросервис к PostgreSQL с помощью Spring Data JPA.
 https://www.youtube.com/watch?v=AeekNYkAYug&list=PLV_4DSIw2vvI3_a6L_z5AlNaIdFNqQlW2&index=7
+
+Что получается:
+Dispatcher
+Docker
+RabbitMQ
+Node
+Postgres
+
+Итог: подключена база данных.
+NodeApplication и Dispatcher должный быть запущены. RabbitMQ и Postgres должны работать из докера
+
+1) Dispatcher принимает входящее сообщение телеграм
+2) Dispatcher передаёт его в RabbitMQ (развёрнут в docker)
+3) RabbitMQ передаёт его в Node
+4) Node через RawData преобразует Update в jsonb
+5) В Node. 
+   1) MainService - связующее звено. 
+   2) ConsumerService получает сообщение из rabbiMQ, передаёт его в MainService 
+   3) MainService обрабатывает сообщение, 
+   4) вызывает saveRawData
+   5) RawDataDAO сохраняет данные в БД - *без участия RabbitMQ
+6) Node получила сообщение, достала оттуда id чата и сформировала ответ Hello from Node
+7) Node передала ответ в RabbitMQ
+8) RabbitMQ передал ответ в Dispatcher
+9) Dispatcher передал его в телеграм
+
+Урок 8. Сохраняем пользователей в Postgres БД. 
+https://www.youtube.com/watch?v=87OG-yaJUZU&list=PLV_4DSIw2vvI3_a6L_z5AlNaIdFNqQlW2&index=9
+
+Модуль common-jpa нужен для совместного использования кода в Node и нового микросервиса для скачивания файлов 
+и подтверждения регистрации с почты.
+
+1) Dispatcher принимает входящее сообщение телеграм
+2) Dispatcher передаёт его в RabbitMQ (развёрнут в docker)
+3) RabbitMQ передаёт его в Node
+4) Node через RawData преобразует Update в jsonb
+5) В Node.
+   1) MainService - связующее звено.
+   2) ConsumerService получает сообщение из rabbiMQ, передаёт его в MainService
+   3) MainService обрабатывает сообщение, 
+   4) Проверяет на наличие пользователя в базе данных
+   5) вызывает saveRawData
+   6) RawDataDAO сохраняет данные в БД - *без участия RabbitMQ
+6) Node получила сообщение, достала оттуда id чата и сформировала ответ Hello from Node
+7) Node передала ответ в RabbitMQ
+8) RabbitMQ передал ответ в Dispatcher
+9) Dispatcher передал его в телеграм
+
+
+Урок 9. Добавляем обработку текстовых команд из чата telegram-бота.
+https://www.youtube.com/watch?v=Yo7knU4rz-g&list=PLV_4DSIw2vvI3_a6L_z5AlNaIdFNqQlW2&index=10

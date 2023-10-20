@@ -67,3 +67,108 @@
 2023-10-10 06:52:48 DEBUG ConsumerService:27 - NODE: Text message is received
 2023-10-11 20:11:02 DEBUG ConsumerService:27 - NODE: Text message is received
 2023-10-11 20:14:26 DEBUG ConsumerService:27 - NODE: Text message is received
+2023-10-19 12:26:57 DEBUG ConsumerService:27 - NODE: Text message is received
+2023-10-19 12:32:05 DEBUG ConsumerService:27 - NODE: Text message is received
+2023-10-19 12:36:47 DEBUG ConsumerService:27 - NODE: Text message is received
+2023-10-19 12:39:55 DEBUG ConsumerService:27 - NODE: Text message is received
+2023-10-19 12:41:34 DEBUG ConsumerService:27 - NODE: Text message is received
+2023-10-19 17:12:44 DEBUG ConsumerService:28 - NODE has received text message from rabbitMQ
+2023-10-19 17:12:44 DEBUG ConsumerService:29 - NODE. Update is being processed
+2023-10-19 17:12:44 DEBUG MainServiceImpl:30 - Starting saving message to DB
+2023-10-19 17:12:44 DEBUG MainServiceImpl:32 - Message successfully saved to DB!
+2023-10-19 17:12:44 DEBUG MainServiceImpl:34 - Starting user check
+2023-10-19 17:12:44 DEBUG MainServiceImpl:40 - test sending from node to dispatcher via rabbitMQ
+2023-10-19 17:12:44 DEBUG MainServiceImpl:45 - sending answer message to rabbitMQ
+2023-10-19 17:12:44 DEBUG MainServiceImpl:47 - answer message is sent to rabbitMQ
+2023-10-19 17:15:55 DEBUG ConsumerService:28 - NODE has received text message from rabbitMQ
+2023-10-19 17:15:55 DEBUG ConsumerService:29 - NODE. Update is being processed
+2023-10-19 17:15:55 DEBUG MainServiceImpl:30 - Starting saving message to DB
+2023-10-19 17:15:55 DEBUG MainServiceImpl:32 - Message successfully saved to DB!
+2023-10-19 17:15:55 DEBUG MainServiceImpl:34 - Starting user check
+2023-10-19 17:15:55 DEBUG MainServiceImpl:40 - test sending from node to dispatcher via rabbitMQ
+2023-10-19 17:15:55 DEBUG MainServiceImpl:45 - sending answer message to rabbitMQ
+2023-10-19 17:15:55 DEBUG MainServiceImpl:47 - answer message is sent to rabbitMQ
+2023-10-19 17:15:56 DEBUG ConsumerService:28 - NODE has received text message from rabbitMQ
+2023-10-19 17:15:56 DEBUG ConsumerService:29 - NODE. Update is being processed
+2023-10-19 17:15:56 DEBUG MainServiceImpl:30 - Starting saving message to DB
+2023-10-19 17:15:56 DEBUG MainServiceImpl:32 - Message successfully saved to DB!
+2023-10-19 17:15:56 DEBUG MainServiceImpl:34 - Starting user check
+2023-10-19 17:15:56 DEBUG MainServiceImpl:40 - test sending from node to dispatcher via rabbitMQ
+2023-10-19 17:15:56 DEBUG MainServiceImpl:45 - sending answer message to rabbitMQ
+2023-10-19 17:15:56 DEBUG MainServiceImpl:47 - answer message is sent to rabbitMQ
+2023-10-19 17:15:56 DEBUG ConsumerService:28 - NODE has received text message from rabbitMQ
+2023-10-19 17:15:56 DEBUG ConsumerService:29 - NODE. Update is being processed
+2023-10-19 17:15:56 DEBUG MainServiceImpl:30 - Starting saving message to DB
+2023-10-19 17:15:56 DEBUG MainServiceImpl:32 - Message successfully saved to DB!
+2023-10-19 17:15:56 DEBUG MainServiceImpl:34 - Starting user check
+2023-10-19 17:15:56 DEBUG MainServiceImpl:40 - test sending from node to dispatcher via rabbitMQ
+2023-10-19 17:15:56 DEBUG MainServiceImpl:45 - sending answer message to rabbitMQ
+2023-10-19 17:15:56 DEBUG MainServiceImpl:47 - answer message is sent to rabbitMQ
+2023-10-19 17:45:21 DEBUG ConsumerService:28 - NODE has received text message from rabbitMQ
+2023-10-19 17:45:21 DEBUG ConsumerService:29 - NODE. Update is being processed
+2023-10-19 17:45:21 DEBUG MainServiceImpl:30 - Starting saving message to DB
+2023-10-19 17:45:21 DEBUG MainServiceImpl:32 - Message successfully saved to DB!
+2023-10-19 17:45:21 DEBUG MainServiceImpl:34 - Starting user check
+2023-10-19 17:45:21 DEBUG MainServiceImpl:40 - test sending from node to dispatcher via rabbitMQ
+2023-10-19 17:45:21 DEBUG MainServiceImpl:45 - sending answer message to rabbitMQ
+2023-10-19 17:45:21 DEBUG MainServiceImpl:47 - answer message is sent to rabbitMQ
+2023-10-19 17:45:32 DEBUG ConsumerService:28 - NODE has received text message from rabbitMQ
+2023-10-19 17:45:32 DEBUG ConsumerService:29 - NODE. Update is being processed
+2023-10-19 17:45:32 DEBUG MainServiceImpl:30 - Starting saving message to DB
+2023-10-19 17:45:32 DEBUG MainServiceImpl:32 - Message successfully saved to DB!
+2023-10-19 17:45:32 DEBUG MainServiceImpl:34 - Starting user check
+2023-10-19 17:45:32 DEBUG MainServiceImpl:40 - test sending from node to dispatcher via rabbitMQ
+2023-10-19 17:45:32 DEBUG MainServiceImpl:45 - sending answer message to rabbitMQ
+2023-10-19 17:45:32 DEBUG MainServiceImpl:47 - answer message is sent to rabbitMQ
+2023-10-19 17:47:36 DEBUG ConsumerService:28 - NODE has received text message from rabbitMQ
+2023-10-19 17:47:36 DEBUG ConsumerService:29 - NODE. Update is being processed
+2023-10-19 17:47:36 DEBUG MainServiceImpl:30 - Starting saving message to DB
+2023-10-19 17:47:36 DEBUG MainServiceImpl:32 - Message successfully saved to DB!
+2023-10-19 17:47:36 DEBUG MainServiceImpl:34 - Starting user check
+2023-10-19 17:47:36 DEBUG MainServiceImpl:40 - test sending from node to dispatcher via rabbitMQ
+2023-10-19 17:47:36 DEBUG MainServiceImpl:45 - sending answer message to rabbitMQ
+2023-10-19 17:47:36 DEBUG MainServiceImpl:47 - answer message is sent to rabbitMQ
+2023-10-19 17:47:55 DEBUG ConsumerService:28 - ---------NODE--------
+2023-10-19 17:47:55 DEBUG ConsumerService:29 - NODE has received text message from rabbitMQ
+2023-10-19 17:47:55 DEBUG ConsumerService:30 - NODE. Update is being processed
+2023-10-19 17:47:55 DEBUG MainServiceImpl:30 - Starting saving message to DB
+2023-10-19 17:47:55 DEBUG MainServiceImpl:32 - Message successfully saved to DB!
+2023-10-19 17:47:55 DEBUG MainServiceImpl:34 - Starting user presence in db check
+2023-10-19 17:47:55 DEBUG MainServiceImpl:72 - User found in db
+2023-10-19 17:47:55 DEBUG MainServiceImpl:38 - User presence check done
+2023-10-19 17:47:55 DEBUG MainServiceImpl:41 - Sending message from node to dispatcher via rabbitMQ
+2023-10-19 17:47:55 DEBUG MainServiceImpl:46 - sending answer message to dispatcher via rabbitMQ: Hello from NODE
+2023-10-19 17:47:55 DEBUG MainServiceImpl:48 - Answer message is sent to dispatcher via rabbitMQ
+2023-10-19 18:12:30 DEBUG ConsumerService:28 - ---------NODE--------
+2023-10-19 18:12:30 DEBUG ConsumerService:29 - NODE has received text message from rabbitMQ
+2023-10-19 18:12:30 DEBUG ConsumerService:30 - NODE. Update is being processed
+2023-10-19 18:12:30 DEBUG MainServiceImpl:30 - Starting saving message to DB
+2023-10-19 18:12:30 DEBUG MainServiceImpl:32 - Message successfully saved to DB!
+2023-10-19 18:12:30 DEBUG MainServiceImpl:34 - Starting user presence in db check
+2023-10-19 18:12:30 DEBUG MainServiceImpl:72 - User found in db
+2023-10-19 18:12:30 DEBUG MainServiceImpl:38 - User presence check done
+2023-10-19 18:12:30 DEBUG MainServiceImpl:41 - Sending message from node to dispatcher via rabbitMQ
+2023-10-19 18:12:30 DEBUG MainServiceImpl:46 - sending answer message to dispatcher via rabbitMQ: Hello from NODE
+2023-10-19 18:12:30 DEBUG MainServiceImpl:48 - Answer message is sent to dispatcher via rabbitMQ
+2023-10-19 18:12:35 DEBUG ConsumerService:28 - ---------NODE--------
+2023-10-19 18:12:35 DEBUG ConsumerService:29 - NODE has received text message from rabbitMQ
+2023-10-19 18:12:35 DEBUG ConsumerService:30 - NODE. Update is being processed
+2023-10-19 18:12:35 DEBUG MainServiceImpl:30 - Starting saving message to DB
+2023-10-19 18:12:35 DEBUG MainServiceImpl:32 - Message successfully saved to DB!
+2023-10-19 18:12:35 DEBUG MainServiceImpl:34 - Starting user presence in db check
+2023-10-19 18:12:35 DEBUG MainServiceImpl:72 - User found in db
+2023-10-19 18:12:35 DEBUG MainServiceImpl:38 - User presence check done
+2023-10-19 18:12:35 DEBUG MainServiceImpl:41 - Sending message from node to dispatcher via rabbitMQ
+2023-10-19 18:12:35 DEBUG MainServiceImpl:46 - sending answer message to dispatcher via rabbitMQ: Hello from NODE
+2023-10-19 18:12:35 DEBUG MainServiceImpl:48 - Answer message is sent to dispatcher via rabbitMQ
+2023-10-19 18:19:50 DEBUG ConsumerService:28 - -------------------------------------------
+2023-10-19 18:19:50 DEBUG ConsumerService:29 - NODE has received text message from rabbitMQ
+2023-10-19 18:19:50 DEBUG ConsumerService:30 - NODE. Update is being processed
+2023-10-19 18:19:50 DEBUG MainServiceImpl:30 - Starting saving message to DB
+2023-10-19 18:19:50 DEBUG MainServiceImpl:32 - Message successfully saved to DB!
+2023-10-19 18:19:50 DEBUG MainServiceImpl:34 - Starting user presence in db check
+2023-10-19 18:19:50 DEBUG MainServiceImpl:72 - User found in db
+2023-10-19 18:19:50 DEBUG MainServiceImpl:38 - User presence check done
+2023-10-19 18:19:50 DEBUG MainServiceImpl:41 - Building answer message
+2023-10-19 18:19:50 DEBUG MainServiceImpl:46 - Sending answer message to dispatcher via rabbitMQ: Hello from NODE
+2023-10-19 18:19:50 DEBUG MainServiceImpl:48 - Answer message is sent to dispatcher via rabbitMQ

@@ -78,6 +78,7 @@ public class TelegramBot extends TelegramLongPollingBot {
 //        response.setText("Hello from bot!");
 //        sendAnswerMessage(response);
         //version 3 - integration with UpdateController
+        log.debug("Waiting for new incoming message");
         updateController.processUpdate(update);
 
     }
