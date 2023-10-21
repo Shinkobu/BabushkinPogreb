@@ -50,11 +50,13 @@ public class UpdateController {
         log.debug("Defining message type");
         var message = update.getMessage();
         if (message.hasText()) {
-            log.debug("Type defined - tex message");
+            log.debug("Type defined - text message");
             processTextMessage(update);
         } else if (message.hasDocument()) {
+            log.debug("Type defined - DOC file");
             processDocMessage(update);
         } else if (message.hasPhoto()) {
+            log.debug("Type defined - PHOTO");
             processPhotoMessage(update);
         } else {
             setUnsupportedMessageTypeView(update);
@@ -84,15 +86,15 @@ public class UpdateController {
 
     private void processPhotoMessage(Update update) {
         updateProducer.produce(PHOTO_MESSAGE_UPDATE, update);
-        setFileIsReceivedView(update);
+//        setFileIsReceivedView(update);
     }
     private void processDocMessage(Update update) {
         updateProducer.produce(DOC_MESSAGE_UPDATE, update);
-        setFileIsReceivedView(update);
+//        setFileIsReceivedView(update);
     }
 
     private void processTextMessage(Update update) {
         updateProducer.produce(TEXT_MESSAGE_UPDATE, update);
-        setFileIsReceivedView(update);
+//        setFileIsReceivedView(update);
     }
 }

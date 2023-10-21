@@ -130,3 +130,22 @@ https://www.youtube.com/watch?v=87OG-yaJUZU&list=PLV_4DSIw2vvI3_a6L_z5AlNaIdFNqQ
 
 Урок 9. Добавляем обработку текстовых команд из чата telegram-бота.
 https://www.youtube.com/watch?v=Yo7knU4rz-g&list=PLV_4DSIw2vvI3_a6L_z5AlNaIdFNqQlW2&index=10
+
+Итог - добавлены заглушки для обработки базовых команд
+
+1) Dispatcher принимает входящее сообщение телеграм
+2) Dispatcher передаёт его в RabbitMQ (развёрнут в docker)
+3) RabbitMQ передаёт его в Node
+4) Node через RawData преобразует Update в jsonb
+5) В Node.
+   1) MainService - связующее звено.
+   2) ConsumerService получает сообщение из rabbiMQ, передаёт его в MainService
+   3) MainService обрабатывает сообщение,
+   4) Проверяет на наличие пользователя в базе данных
+   5) Вызывает saveRawData 
+   6) RawDataDAO сохраняет данные в БД
+   7) Для фото и doc файлов идёт проверка состояния юзера
+6) Node получила сообщение, достала оттуда id чата и сформировала ответ Hello from Node
+7) Node передала ответ в RabbitMQ
+8) RabbitMQ передал ответ в Dispatcher
+9) Dispatcher передал его в телеграм

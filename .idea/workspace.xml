@@ -5,37 +5,20 @@
   </component>
   <component name="ChangeListManager">
     <list default="true" id="69612e7c-d684-45ad-96f1-e9284ef250e2" name="Changes" comment="Lesson 2 done">
-      <change afterPath="$PROJECT_DIR$/common-jpa/pom.xml" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/.idea/compiler.xml" beforeDir="false" afterPath="$PROJECT_DIR$/.idea/compiler.xml" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/.idea/dbnavigator.xml" beforeDir="false" afterPath="$PROJECT_DIR$/.idea/dbnavigator.xml" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/.idea/encodings.xml" beforeDir="false" afterPath="$PROJECT_DIR$/.idea/encodings.xml" afterDir="false" />
       <change beforePath="$PROJECT_DIR$/.idea/workspace.xml" beforeDir="false" afterPath="$PROJECT_DIR$/.idea/workspace.xml" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/common-rabbitmq/target/classes/RabbitQueue.class" beforeDir="false" />
-      <change beforePath="$PROJECT_DIR$/common-rabbitmq/target/maven-status/maven-compiler-plugin/compile/default-compile/createdFiles.lst" beforeDir="false" />
-      <change beforePath="$PROJECT_DIR$/common-rabbitmq/target/maven-status/maven-compiler-plugin/compile/default-compile/inputFiles.lst" beforeDir="false" />
-      <change beforePath="$PROJECT_DIR$/dispatcher/src/main/java/ru/relex/controller/TelegramBot.java" beforeDir="false" afterPath="$PROJECT_DIR$/dispatcher/src/main/java/ru/relex/controller/TelegramBot.java" afterDir="false" />
       <change beforePath="$PROJECT_DIR$/dispatcher/src/main/java/ru/relex/controller/UpdateController.java" beforeDir="false" afterPath="$PROJECT_DIR$/dispatcher/src/main/java/ru/relex/controller/UpdateController.java" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/dispatcher/src/main/java/ru/relex/service/impl/UpdateProducerImpl.java" beforeDir="false" afterPath="$PROJECT_DIR$/dispatcher/src/main/java/ru/relex/service/impl/UpdateProducerImpl.java" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/dispatcher/src/main/java/ru/relex/utils/MessageUtils.java" beforeDir="false" afterPath="$PROJECT_DIR$/dispatcher/src/main/java/ru/relex/utils/MessageUtils.java" afterDir="false" />
       <change beforePath="$PROJECT_DIR$/dispatcher/src/main/resources/README.md" beforeDir="false" afterPath="$PROJECT_DIR$/dispatcher/src/main/resources/README.md" afterDir="false" />
       <change beforePath="$PROJECT_DIR$/dispatcher/target/classes/README.md" beforeDir="false" afterPath="$PROJECT_DIR$/dispatcher/target/classes/README.md" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/dispatcher/target/classes/ru/relex/controller/TelegramBot.class" beforeDir="false" afterPath="$PROJECT_DIR$/dispatcher/target/classes/ru/relex/controller/TelegramBot.class" afterDir="false" />
       <change beforePath="$PROJECT_DIR$/dispatcher/target/classes/ru/relex/controller/UpdateController.class" beforeDir="false" afterPath="$PROJECT_DIR$/dispatcher/target/classes/ru/relex/controller/UpdateController.class" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/dispatcher/target/classes/ru/relex/service/impl/UpdateProducerImpl.class" beforeDir="false" afterPath="$PROJECT_DIR$/dispatcher/target/classes/ru/relex/service/impl/UpdateProducerImpl.class" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/dispatcher/target/maven-status/maven-compiler-plugin/compile/default-compile/createdFiles.lst" beforeDir="false" />
-      <change beforePath="$PROJECT_DIR$/dispatcher/target/maven-status/maven-compiler-plugin/compile/default-compile/inputFiles.lst" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/dispatcher/target/classes/ru/relex/utils/MessageUtils.class" beforeDir="false" afterPath="$PROJECT_DIR$/dispatcher/target/classes/ru/relex/utils/MessageUtils.class" afterDir="false" />
       <change beforePath="$PROJECT_DIR$/logs/dispatcher.log" beforeDir="false" afterPath="$PROJECT_DIR$/logs/dispatcher.log" afterDir="false" />
       <change beforePath="$PROJECT_DIR$/logs/node.log" beforeDir="false" afterPath="$PROJECT_DIR$/logs/node.log" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/node/pom.xml" beforeDir="false" afterPath="$PROJECT_DIR$/node/pom.xml" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/node/src/main/java/ru/relex/entity/RawData.java" beforeDir="false" afterPath="$PROJECT_DIR$/node/src/main/java/ru/relex/entity/RawData.java" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/node/src/main/java/ru/relex/service/MainService.java" beforeDir="false" afterPath="$PROJECT_DIR$/node/src/main/java/ru/relex/service/MainService.java" afterDir="false" />
       <change beforePath="$PROJECT_DIR$/node/src/main/java/ru/relex/service/impl/ConsumerService.java" beforeDir="false" afterPath="$PROJECT_DIR$/node/src/main/java/ru/relex/service/impl/ConsumerService.java" afterDir="false" />
       <change beforePath="$PROJECT_DIR$/node/src/main/java/ru/relex/service/impl/MainServiceImpl.java" beforeDir="false" afterPath="$PROJECT_DIR$/node/src/main/java/ru/relex/service/impl/MainServiceImpl.java" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/node/src/main/resources/application.properties" beforeDir="false" afterPath="$PROJECT_DIR$/node/src/main/resources/application.properties" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/node/target/classes/application.properties" beforeDir="false" afterPath="$PROJECT_DIR$/node/target/classes/application.properties" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/node/target/classes/ru/relex/entity/RawData.class" beforeDir="false" afterPath="$PROJECT_DIR$/node/target/classes/ru/relex/entity/RawData.class" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/node/target/classes/ru/relex/service/MainService.class" beforeDir="false" afterPath="$PROJECT_DIR$/node/target/classes/ru/relex/service/MainService.class" afterDir="false" />
       <change beforePath="$PROJECT_DIR$/node/target/classes/ru/relex/service/impl/ConsumerService.class" beforeDir="false" afterPath="$PROJECT_DIR$/node/target/classes/ru/relex/service/impl/ConsumerService.class" afterDir="false" />
       <change beforePath="$PROJECT_DIR$/node/target/classes/ru/relex/service/impl/MainServiceImpl.class" beforeDir="false" afterPath="$PROJECT_DIR$/node/target/classes/ru/relex/service/impl/MainServiceImpl.class" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/pom.xml" beforeDir="false" afterPath="$PROJECT_DIR$/pom.xml" afterDir="false" />
     </list>
     <option name="SHOW_DIALOG" value="false" />
     <option name="HIGHLIGHT_CONFLICTS" value="true" />
@@ -46,8 +29,8 @@
     <option name="RECENT_TEMPLATES">
       <list>
         <option value="Interface" />
-        <option value="Enum" />
         <option value="Class" />
+        <option value="Enum" />
       </list>
     </option>
   </component>
@@ -92,7 +75,7 @@
       <recent name="ru.relex.service.impl" />
     </key>
   </component>
-  <component name="RunManager" selected="Application.ru.relex.NodeApplication">
+  <component name="RunManager" selected="Application.ru.relex.DispatcherApplication">
     <configuration name="ru.relex.DispatcherApplication" type="Application" factoryName="Application" temporary="true" nameIsGenerated="true">
       <option name="MAIN_CLASS_NAME" value="ru.relex.DispatcherApplication" />
       <module name="dispatcher" />
@@ -121,8 +104,8 @@
     </configuration>
     <recent_temporary>
       <list>
-        <item itemvalue="Application.ru.relex.NodeApplication" />
         <item itemvalue="Application.ru.relex.DispatcherApplication" />
+        <item itemvalue="Application.ru.relex.NodeApplication" />
       </list>
     </recent_temporary>
   </component>

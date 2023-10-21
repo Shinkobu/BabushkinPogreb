@@ -26,22 +26,26 @@ public class ConsumerService implements ru.relex.service.ConsumerService {
     public void consumeTextMessageUpdates(Update update) {
 //        log.debug("NODE: Text message is received"); //stub
         log.debug("-------------------------------------------");
-        log.debug("NODE has received text message from rabbitMQ");
-        log.debug("NODE. Update is being processed");
+        log.debug("NODE has received TEXT message from rabbitMQ");
+        log.debug("NODE. Update is being processed...");
         mainService.processTextMessage(update);
     }
 
     @Override
     @RabbitListener(queues = DOC_MESSAGE_UPDATE) // the queue which method will listen to
     public void consumeDocMessageUpdates(Update update) {
-        log.debug("NODE: Text message is received"); //stub
-
+        log.debug("-------------------------------------------");
+        log.debug("NODE has received DOC message from rabbitMQ");
+        log.debug("NODE. Update is being processed...");
+        mainService.processDocMessage(update);
     }
 
     @Override
     @RabbitListener(queues = PHOTO_MESSAGE_UPDATE) // the queue which method will listen to
     public void consumePhotoMessageUpdates(Update update) {
-        log.debug("NODE: Text message is received"); //stub
-
+        log.debug("-------------------------------------------");
+        log.debug("NODE has received PHOTO message from rabbitMQ");
+        log.debug("NODE. Update is being processed...");
+        mainService.processPhotoMessage(update);
     }
 }

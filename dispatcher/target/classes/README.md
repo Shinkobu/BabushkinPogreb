@@ -126,3 +126,7 @@ https://www.youtube.com/watch?v=87OG-yaJUZU&list=PLV_4DSIw2vvI3_a6L_z5AlNaIdFNqQ
 7) Node передала ответ в RabbitMQ
 8) RabbitMQ передал ответ в Dispatcher
 9) Dispatcher передал его в телеграм
+
+
+Урок 9. Добавляем обработку текстовых команд из чата telegram-бота.
+https://www.youtube.com/watch?v=Yo7knU4rz-g&list=PLV_4DSIw2vvI3_a6L_z5AlNaIdFNqQlW2&index=10
